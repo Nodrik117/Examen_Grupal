@@ -14,7 +14,7 @@ class TratamientoController extends Controller
     public function index()
     {
         $tratamientos = Tratamientos::orderBy('id_tratamiento', 'DESC')->get(); // Añadido 'get()' para ejecutar la consulta
-        return view('Tratamientos.index', compact('tratamientos'));
+        return view('tratamientos.index', compact('tratamientos'));
     }
 
     /**
@@ -23,7 +23,7 @@ class TratamientoController extends Controller
     public function create()
     {
         // Retorna una vista con el formulario para crear un nuevo tratamiento
-        return view('Tratamientos.create'); // Asume que tienes una vista llamada 'create' en la carpeta 'tratamientos'
+        return view('tratamientos.create'); // Asume que tienes una vista llamada 'create' en la carpeta 'tratamientos'
     }
 
     /**
