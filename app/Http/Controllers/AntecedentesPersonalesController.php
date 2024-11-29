@@ -21,7 +21,7 @@ class AntecedentesPersonalesController extends Controller
     */
    public function create()
    {
-       // Retorna la vista para crear antecedentes personales
+       // Retorna la vista para crear antecedentes personal
        return view('antecedentes.create');
    }
 
