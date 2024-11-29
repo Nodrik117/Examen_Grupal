@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('antecedentes_personales', function (Blueprint $table) {
             $table->id();
             $table->boolean('alergia_antibiotico');
-            $table->boolean('alergia_anesstesia');
+            $table->boolean('alergia_anestesia');
             $table->boolean('asma');
             $table->boolean('diabetes');
             $table->boolean('hipertension');

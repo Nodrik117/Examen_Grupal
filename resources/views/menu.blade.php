@@ -27,13 +27,13 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="btn-group">
-                        <a href="{{url('/')}}" class="btn btn-primary">Crud 1</a>
-                        <a href="{{url('/')}}" class="btn btn-primary">Crud 2</a>
-                      </div>
+                        <a href="{{ url('/tratamientos') }}" class="btn btn-secondary">Crud Tratamientos</a>
+                        <a href="{{ url('/antecedentes') }}" class="btn btn-dark">Crud Antecedentes personales</a>
+                    </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="accordion-item">
             <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
@@ -45,9 +45,9 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="btn-group">
-                        <a href="{{url('/')}}" class="btn btn-primary">Link</a>
-                        <a href="{{url('/')}}" class="btn btn-primary">Link</a>
-                      </div>
+                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -62,9 +62,9 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="btn-group">
-                        <a href="{{url('/')}}" class="btn btn-primary">Link</a>
-                        <a href="{{url('/')}}" class="btn btn-primary">Link</a>
-                      </div>
+                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -80,9 +80,9 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="btn-group">
-                        <a href="{{url('/')}}" class="btn btn-primary">Link</a>
-                        <a href="{{url('/')}}" class="btn btn-primary">Link</a>
-                      </div>
+                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                    </div>
                 </div>
             </div>
         </div>
