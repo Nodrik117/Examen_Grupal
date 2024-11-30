@@ -35,7 +35,8 @@ class UsuarioController extends Controller
         $validatedData = $request->validate([
             'cedula' => 'required|string|max:20|unique:usuarios,cedula',
             'genero' => 'required|string|max:255',
-            'apellido' => 'required|string|max:255',
+            'nombres' => 'required|string|max:255',
+            'apellidos' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:usuarios,email',
             'password' => 'required|string|min:8|confirmed', // Aseguramos que la contraseña esté confirmada
             'telefono' => 'nullable|string|max:20',
@@ -45,7 +46,8 @@ class UsuarioController extends Controller
         Usuario::create([
             'cedula' => $validatedData['cedula'],
             'genero' => $validatedData['genero'],
-            'apellido' => $validatedData['apellido'],
+            'nombres' => $validatedData['nombres'],
+            'apellidos' => $validatedData['apellidos'],
             'email' => $validatedData['email'],
             'password' => bcrypt($validatedData['password']), // Encriptar la contraseña
             'telefono' => $validatedData['telefono'] ?? null,
@@ -87,7 +89,8 @@ class UsuarioController extends Controller
         // Validación de los datos recibidos
         $validatedData = $request->validate([
             'genero' => 'required|string|max:255',
-            'apellido' => 'required|string|max:255',
+            'nombres' => 'required|string|max:255',
+            'apellidos' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:usuarios,email,' . $cedula . ',cedula',
             'password' => 'nullable|string|min:8|confirmed', // La contraseña es opcional, solo si se desea cambiar
             'telefono' => 'nullable|string|max:20',
@@ -99,7 +102,8 @@ class UsuarioController extends Controller
         // Actualizar el usuario
         $usuario->update([
             'genero' => $validatedData['genero'],
-            'apellido' => $validatedData['apellido'],
+            'nombres' => $validatedData['nombres'],
+            'apellidos' => $validatedData['apellidos'],
             'email' => $validatedData['email'],
             'password' => $validatedData['password'] ? bcrypt($validatedData['password']) : $usuario->password,
             'telefono' => $validatedData['telefono'] ?? $usuario->telefono,

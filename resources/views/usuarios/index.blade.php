@@ -20,7 +20,8 @@
                                 <thead>
                                     <th>Cédula</th>
                                     <th>Género</th>
-                                    <th>Apellido</th>
+                                    <th>Nombres</th>
+                                    <th>Apellidos</th>
                                     <th>Email</th>
                                     <th>Teléfono</th>
                                     <th>Editar</th>
@@ -32,7 +33,8 @@
                                             <tr>
                                                 <td>{{ $usuario->cedula }}</td>
                                                 <td>{{ $usuario->genero }}</td>
-                                                <td>{{ $usuario->apellido }}</td>
+                                                <td>{{ $usuario->nombres }}</td>
+                                                <td>{{ $usuario->apellidos }}</td>
                                                 <td>{{ $usuario->email }}</td>
                                                 <td>{{ $usuario->telefono }}</td>
 

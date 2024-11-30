@@ -56,15 +56,22 @@
                                 </div>
 
                                 <div class="row">
+                                    <!-- Campo de Nombre -->
+                                    <div class="col-xs-6 col-sm-6 col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" name="nombres" id="nombres"
+                                                class="form-control input-sm" placeholder="Nombres"
+                                                value="{{ old('nombres', $usuario->nombres) }}">
+                                        </div>
+                                    </div>
                                     <!-- Campo de Apellido -->
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">
-                                            <input type="text" name="apellido" id="apellido"
-                                                class="form-control input-sm" placeholder="Apellido"
-                                                value="{{ old('apellido', $usuario->apellido) }}">
+                                            <input type="text" name="apellidos" id="apellidos"
+                                                class="form-control input-sm" placeholder="Apellidos"
+                                                value="{{ old('apellidos', $usuario->apellidos) }}">
                                         </div>
                                     </div>
-
                                     <!-- Campo de Email -->
                                     <div class="col-xs-6 col-sm-6 col-md-6">
                                         <div class="form-group">

@@ -16,7 +16,8 @@ class Usuario extends Model
     protected $fillable = [
         'cedula',
         'genero',
-        'apellido',
+        'nombres',
+        'apellidos',
         'email',
         'password',
         'telefono',
