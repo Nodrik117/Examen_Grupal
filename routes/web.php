@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\TratamientoController;
 use App\Http\Controllers\AntecedentesPersonalesController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 // Ruta principal
@@ -14,5 +15,8 @@ Route::resource('tratamientos', TratamientoController::class);
 
 // Ruta para los antecedentes personales (usando recurso)
 Route::resource('antecedentes', AntecedentesPersonalesController::class);
+
+// Ruta para los usuarios (usando recurso)
+Route::resource('usuarios', UsuarioController::class);
 
 
