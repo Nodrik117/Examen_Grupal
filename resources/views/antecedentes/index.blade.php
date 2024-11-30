@@ -3,8 +3,8 @@
 @section('content')
 <div class="row">
   <section class="content">
-    <div class="col-md-6 col-md-offset-0">
-      <div class="panel">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="panel panel-default">
         <div class="panel-body">
           <div class="pull-left"><h3>Lista de Antecedentes Personales</h3></div>
           <div class="pull-right">
