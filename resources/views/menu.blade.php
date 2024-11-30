@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <title>Document</title>
+    <title>Menu Cruds</title>
 </head>
 
 <body>
@@ -80,7 +80,7 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="btn-group">
-                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                        <a href="{{ url('/usuarios') }}" class="btn btn-primary">Crud Usuarios</a>
                         <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
                     </div>
                 </div>
