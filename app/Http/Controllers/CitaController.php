@@ -94,7 +94,7 @@ class CitaController extends Controller
         }
 
         $cita->update($request->all());
-        return redirect()->route('cita.index')->with('success', 'Cita actualizada correctamente.');
+        return redirect()->route('citas.index')->with('success', 'Cita actualizada correctamente.');
     }
 
     /**
