@@ -10,6 +10,7 @@
           <div class="pull-right">
             <div class="btn-group">
               <a href="{{ route('tratamientos.create') }}" class="btn btn-info">Añadir Tratamientos</a>
+              <a href="{{ url('/') }}" class="btn btn-primary">Regresar</a>
             </div>
           </div>
           <div class="table-container">
