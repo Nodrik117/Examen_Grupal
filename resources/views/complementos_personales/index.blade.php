@@ -12,6 +12,7 @@
           <div class="pull-right">
             <div class="btn-group">
               <a href="{{ route('complementos_personales.create') }}" class="btn btn-info">Añadir Complemento</a>
+              <a href="{{ url('/') }}" class="btn btn-primary">Regresar</a>
             </div>
           </div>
           <div class="table-container">
