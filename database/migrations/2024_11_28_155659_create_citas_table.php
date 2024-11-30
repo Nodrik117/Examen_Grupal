@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('telefono_paciente');
             $table->date('fecha_cita');
             $table->time('hora_cita');
-            $table->time('especialidad');
+            $table->string('especialidad');
             $table->string('nombre_odontologo');
             $table->string('apellido_odontologo');
             $table->timestamps();

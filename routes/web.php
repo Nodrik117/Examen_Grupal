@@ -3,7 +3,7 @@
 use App\Http\Controllers\TratamientoController;
 use App\Http\Controllers\AntecedentesPersonalesController;
 use App\Http\Controllers\UsuarioController;
-use APP\Http\Controllers\CitaController;
+use App\Http\Controllers\CitaController;
 use Illuminate\Support\Facades\Route;
 
 // Ruta principal
@@ -20,6 +20,6 @@ Route::resource('antecedentes', AntecedentesPersonalesController::class);
 // Ruta para los usuarios (usando recurso)
 Route::resource('usuarios', UsuarioController::class);
 
-//Ruta para las citas (usando recurso)
+// Ruta para los usuarios (usando recurso)
 Route::resource('citas', CitaController::class);
 

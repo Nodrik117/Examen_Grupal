@@ -43,7 +43,7 @@ class CitaController extends Controller
         ]);
 
         Cita::create($request->all());
-        return redirect()->route('cita.index')->with('success', 'Cita creada correctamente.');
+        return redirect()->route('citas.index')->with('success', 'Cita creada correctamente.');
     }
 
     /**
@@ -53,7 +53,7 @@ class CitaController extends Controller
     {
         $cita = Cita::find($id);
         if (!$cita) {
-            return redirect()->route('cita.index')->with('error', 'Cita no encontrada.');
+            return redirect()->route('citas.index')->with('error', 'Cita no encontrada.');
         }
         return view('cita.show', compact('cita'));
     }
@@ -65,7 +65,7 @@ class CitaController extends Controller
     {
         $cita = Cita::find($id);
         if (!$cita) {
-            return redirect()->route('cita.index')->with('error', 'Cita no encontrada.');
+            return redirect()->route('citas.index')->with('error', 'Cita no encontrada.');
         }
         return view('cita.edit', compact('cita'));
     }
@@ -90,7 +90,7 @@ class CitaController extends Controller
 
         $cita = Cita::find($id);
         if (!$cita) {
-            return redirect()->route('cita.index')->with('error', 'Cita no encontrada.');
+            return redirect()->route('citas.index')->with('error', 'Cita no encontrada.');
         }
 
         $cita->update($request->all());
@@ -104,10 +104,10 @@ class CitaController extends Controller
     {
         $cita = Cita::find($id);
         if (!$cita) {
-            return redirect()->route('cita.index')->with('error', 'Cita no encontrada.');
+            return redirect()->route('citas.index')->with('error', 'Cita no encontrada.');
         }
 
         $cita->delete();
-        return redirect()->route('cita.index')->with('success', 'Cita eliminada correctamente.');
+        return redirect()->route('citas.index')->with('success', 'Cita eliminada correctamente.');
     }
 }
