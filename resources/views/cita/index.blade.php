@@ -18,6 +18,7 @@
             <table id="mytable" class="table table-bordered table-striped">
              <thead>
                <th>Paciente</th>
+               <th>Cédula</th>
                <th>Teléfono</th>
                <th>Fecha de Cita</th>
                <th>Hora</th>
@@ -31,6 +32,7 @@
               @foreach($citas as $cita)  
               <tr>
                 <td>{{ $cita->nombre_paciente }} {{ $cita->apellido_paciente }}</td>
+                <td>{{ $cita->id_paciente}}</td>
                 <td>{{ $cita->telefono_paciente }}</td>
                 <td>{{ $cita->fecha_cita }}</td>
                 <td>{{ $cita->hora_cita }}</td>
