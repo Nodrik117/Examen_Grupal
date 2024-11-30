@@ -4,6 +4,7 @@ use App\Http\Controllers\TratamientoController;
 use App\Http\Controllers\AntecedentesPersonalesController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\CitaController;
+use App\Http\Controllers\ComplementoPersonalController;
 use Illuminate\Support\Facades\Route;
 
 // Ruta principal
@@ -23,3 +24,4 @@ Route::resource('usuarios', UsuarioController::class);
 // Ruta para los usuarios (usando recurso)
 Route::resource('citas', CitaController::class);
 
+Route::resource('complementos_personales', ComplementoPersonalController::class);

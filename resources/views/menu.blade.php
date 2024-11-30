@@ -46,6 +46,7 @@
                 <div class="accordion-body">
                     <div class="btn-group">
                         <a href="{{ url('/citas') }}" class="btn btn-primary">Crud citas</a>
+                        <a href="{{ url('/complementos_personales') }}" class="btn btn-primary">Crud complementos personales</a>
                     </div>
                 </div>
             </div>
