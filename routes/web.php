@@ -7,6 +7,7 @@ use App\Http\Controllers\HistorialCitasController;
 use App\Http\Controllers\CitaController;
 use App\Http\Controllers\ComplementoPersonalController;
 use App\Http\Controllers\SignosVitalesController;
+use App\Http\Controllers\HistoriasClinicasController;
 use Illuminate\Support\Facades\Route;
 
 // Ruta principal
@@ -37,4 +38,7 @@ Route::resource('citas', CitaController::class);
 
 // Rutas para los signos vitales (usando recurso)
 Route::resource('signos-vitales', SignosVitalesController::class);
+
+// Rutas para los signos vitales (usando recurso)
+Route::resource('historias_clinicas', HistoriasClinicasController::class);
 
