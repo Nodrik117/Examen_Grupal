@@ -29,6 +29,7 @@ Route::resource('historial_citas', HistorialCitasController::class);
 // Ruta para los usuarios (usando recurso)
 Route::resource('citas', CitaController::class);
 
+// Ruta para los usuarios (usando recurso)
 Route::resource('complementos_personales', ComplementoPersonalController::class);
 
 // Rutas para las citas (usando recurso)
