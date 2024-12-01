@@ -38,7 +38,7 @@ class SignosVitalesController extends Controller
 
         SignosVitales::create($validatedData);
 
-        return redirect()->route('signosvitales.index')->with('success', 'Signos vitales registrados exitosamente.');
+        return redirect()->route('signos-vitales.index')->with('success', 'Signos vitales registrados exitosamente.');
     }
 
     /**
@@ -47,7 +47,7 @@ class SignosVitalesController extends Controller
     public function show(string $id)
     {
         $signosVitales = SignosVitales::findOrFail($id);
-        return view('signosvitales.show', compact('signosVitales'));
+        return view('signos_vitales.show', compact('signosVitales'));
     }
 
     /**
@@ -74,7 +74,7 @@ class SignosVitalesController extends Controller
         $signosVitales = SignosVitales::findOrFail($id);
         $signosVitales->update($validatedData);
 
-        return redirect()->route('signosvitales.index')->with('success', 'Signos vitales actualizados exitosamente.');
+        return redirect()->route('signos-vitales.index')->with('success', 'Signos vitales actualizados exitosamente.');
     }
 
     /**
@@ -85,6 +85,6 @@ class SignosVitalesController extends Controller
         $signosVitales = SignosVitales::findOrFail($id);
         $signosVitales->delete();
 
-        return redirect()->route('signosvitales.index')->with('success', 'Signos vitales eliminados exitosamente.');
+        return redirect()->route('signos-vitales.index')->with('success', 'Signos vitales eliminados exitosamente.');
     }
 }
