@@ -62,7 +62,7 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <div class="btn-group">
-                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                        <a href="{{ url('/signos-vitales') }}" class="btn btn-primary">CRUD SIGNOS VITALES</a>
                         <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
                     </div>
                 </div>
