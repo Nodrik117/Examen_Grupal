@@ -13,13 +13,13 @@ return new class extends Migration
     {
         // Crear la tabla 'historias_clinicas'
         Schema::create('historias_clinicas', function (Blueprint $table) {
-            $table->id('id_historiaclinica'); // ID único para la historia clínica
-            $table->date('fecha_creacion_historia'); // Fecha de creación de la historia clínica
-            $table->string('establecimiento', 50); // Nombre del establecimiento
-            $table->string('genero', 50); // Género del paciente
-            $table->string('motivo_consulta', 200)->nullable(); // Motivo de la consulta
-            $table->string('problema_actual', 200)->nullable(); // Descripción del problema actual
-            $table->timestamps(); // Timestamps para las fechas de creación y actualización
+            $table->id();
+            $table->date('fecha_creacion_historia');
+            $table->string('establecimiento');
+            $table->string('genero');
+            $table->string('motivo_consulta')->nullable();
+            $table->string('problema_actual')->nullable();
+            $table->timestamps();
         });
     }
 

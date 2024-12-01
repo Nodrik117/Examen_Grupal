@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\HistoriasClinicas;
+use App\Models\HistoriaClinica;
 use Illuminate\Http\Request;
 
 class HistoriasClinicasController extends Controller
@@ -12,7 +12,8 @@ class HistoriasClinicasController extends Controller
      */
     public function index()
     {
-        $historias = HistoriasClinicas::orderBy('id_historiaclinica', 'DESC')->paginate(3);
+        // Paginación de las historias clínicas
+        $historias = HistoriaClinica::orderBy('id', 'DESC')->paginate(5);
         return view('historias_clinicas.index', compact('historias'));
     }
 
@@ -21,6 +22,7 @@ class HistoriasClinicasController extends Controller
      */
     public function create()
     {
+        // Retorna el formulario para crear una nueva historia clínica
         return view('historias_clinicas.create');
     }
 
@@ -29,24 +31,27 @@ class HistoriasClinicasController extends Controller
      */
     public function store(Request $request)
     {
+        // Validar los datos ingresados
         $request->validate([
             'fecha_creacion_historia' => 'required|date',
-            'establecimiento' => 'required|string|max:50',
+            'establecimiento' => 'required|string|max:255',
             'genero' => 'required|string|max:50',
-            'motivo_consulta' => 'nullable|string|max:200',
-            'problema_actual' => 'nullable|string|max:200',
+            'motivo_consulta' => 'nullable|string|max:500',
+            'problema_actual' => 'nullable|string',
         ]);
 
-        HistoriasClinicas::create($request->all());
+        // Crear la nueva historia clínica
+        HistoriaClinica::create($request->all());
         return redirect()->route('historias_clinicas.index')->with('success', 'Historia clínica creada correctamente.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(int $id)
     {
-        $historia = HistoriasClinicas::find($id);
+        // Buscar la historia clínica por su ID
+        $historia = HistoriaClinica::find($id);
         if (!$historia) {
             return redirect()->route('historias_clinicas.index')->with('error', 'Historia clínica no encontrada.');
         }
@@ -56,9 +61,10 @@ class HistoriasClinicasController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(int $id)
     {
-        $historia = HistoriasClinicas::find($id);
+        // Buscar la historia clínica por su ID
+        $historia = HistoriaClinica::find($id);
         if (!$historia) {
             return redirect()->route('historias_clinicas.index')->with('error', 'Historia clínica no encontrada.');
         }
@@ -68,21 +74,24 @@ class HistoriasClinicasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, int $id)
     {
+        // Validar los datos ingresados
         $request->validate([
             'fecha_creacion_historia' => 'required|date',
-            'establecimiento' => 'required|string|max:50',
+            'establecimiento' => 'required|string|max:255',
             'genero' => 'required|string|max:50',
-            'motivo_consulta' => 'nullable|string|max:200',
-            'problema_actual' => 'nullable|string|max:200',
+            'motivo_consulta' => 'nullable|string|max:500',
+            'problema_actual' => 'nullable|string',
         ]);
 
-        $historia = HistoriasClinicas::find($id);
+        // Buscar la historia clínica por su ID
+        $historia = HistoriaClinica::find($id);
         if (!$historia) {
             return redirect()->route('historias_clinicas.index')->with('error', 'Historia clínica no encontrada.');
         }
 
+        // Actualizar los datos de la historia clínica
         $historia->update($request->all());
         return redirect()->route('historias_clinicas.index')->with('success', 'Historia clínica actualizada correctamente.');
     }
@@ -90,13 +99,15 @@ class HistoriasClinicasController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(int $id)
     {
-        $historia = HistoriasClinicas::find($id);
+        // Buscar la historia clínica por su ID
+        $historia = HistoriaClinica::find($id);
         if (!$historia) {
             return redirect()->route('historias_clinicas.index')->with('error', 'Historia clínica no encontrada.');
         }
 
+        // Eliminar la historia clínica
         $historia->delete();
         return redirect()->route('historias_clinicas.index')->with('success', 'Historia clínica eliminada correctamente.');
     }
