@@ -81,7 +81,7 @@
                 <div class="accordion-body">
                     <div class="btn-group">
                         <a href="{{ url('/usuarios') }}" class="btn btn-primary">Crud Usuarios</a>
-                        <a href="{{ url('/') }}" class="btn btn-primary">Link</a>
+                        <a href="{{ url('/historial_citas') }}" class="btn btn-primary">Crud Historial Citas</a>
                     </div>
                 </div>
             </div>

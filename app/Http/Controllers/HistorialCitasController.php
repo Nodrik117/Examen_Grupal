@@ -35,7 +35,7 @@ class HistorialCitasController extends Controller
         $validatedData = $request->validate([
             'motivo' => 'required|string|max:255',
             'observaciones' => 'required|string|max:255',
-            'duracion' => 'required|date_format:H:i',
+            'duracion' => 'required',
             'tratamiento_realizado' => 'required|string|max:255',
         ]);
 
@@ -78,7 +78,7 @@ class HistorialCitasController extends Controller
         $validatedData = $request->validate([
             'motivo' => 'required|string|max:255',
             'observaciones' => 'required|string|max:255',
-            'duracion' => 'required|date_format:H:i',
+            'duracion' => 'required',
             'tratamiento_realizado' => 'required|string|max:255',
         ]);
 
