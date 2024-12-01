@@ -21,7 +21,7 @@ class SignosVitalesController extends Controller
      */
     public function create()
     {
-        return view('signos_vitales.create');
+        return view('signosvitales.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class SignosVitalesController extends Controller
 
         SignosVitales::create($validatedData);
 
-        return redirect()->route('signos_vitales.index')->with('success', 'Signos vitales registrados exitosamente.');
+        return redirect()->route('signosvitales.index')->with('success', 'Signos vitales registrados exitosamente.');
     }
 
     /**
@@ -47,7 +47,7 @@ class SignosVitalesController extends Controller
     public function show(string $id)
     {
         $signosVitales = SignosVitales::findOrFail($id);
-        return view('signos_vitales.show', compact('signosVitales'));
+        return view('signosvitales.show', compact('signosVitales'));
     }
 
     /**
@@ -56,7 +56,7 @@ class SignosVitalesController extends Controller
     public function edit(string $id)
     {
         $signosVitales = SignosVitales::findOrFail($id);
-        return view('signos_vitales.edit', compact('signosVitales'));
+        return view('signosvitales.edit', compact('signosVitales'));
     }
 
     /**
@@ -74,7 +74,7 @@ class SignosVitalesController extends Controller
         $signosVitales = SignosVitales::findOrFail($id);
         $signosVitales->update($validatedData);
 
-        return redirect()->route('signos_vitales.index')->with('success', 'Signos vitales actualizados exitosamente.');
+        return redirect()->route('signosvitales.index')->with('success', 'Signos vitales actualizados exitosamente.');
     }
 
     /**
@@ -85,6 +85,6 @@ class SignosVitalesController extends Controller
         $signosVitales = SignosVitales::findOrFail($id);
         $signosVitales->delete();
 
-        return redirect()->route('signos_vitales.index')->with('success', 'Signos vitales eliminados exitosamente.');
+        return redirect()->route('signosvitales.index')->with('success', 'Signos vitales eliminados exitosamente.');
     }
 }
