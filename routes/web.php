@@ -5,11 +5,8 @@ use App\Http\Controllers\AntecedentesPersonalesController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\HistorialCitasController;
 use App\Http\Controllers\CitaController;
-<<<<<<< HEAD
 use App\Http\Controllers\ComplementoPersonalController;
-=======
-use App\Http\Controllers\SignosVitalesController; 
->>>>>>> 1a7102f (CRUD SIGNOS VITALES)
+use App\Http\Controllers\SignosVitalesController;
 use Illuminate\Support\Facades\Route;
 
 // Ruta principal
@@ -26,7 +23,6 @@ Route::resource('antecedentes', AntecedentesPersonalesController::class);
 // Rutas para los usuarios (usando recurso)
 Route::resource('usuarios', UsuarioController::class);
 
-<<<<<<< HEAD
 // Ruta para los usuarios (usando recurso)
 Route::resource('historial_citas', HistorialCitasController::class);
 
@@ -34,10 +30,10 @@ Route::resource('historial_citas', HistorialCitasController::class);
 Route::resource('citas', CitaController::class);
 
 Route::resource('complementos_personales', ComplementoPersonalController::class);
-=======
+
 // Rutas para las citas (usando recurso)
 Route::resource('citas', CitaController::class);
 
 // Rutas para los signos vitales (usando recurso)
 Route::resource('signos-vitales', SignosVitalesController::class);
->>>>>>> 1a7102f (CRUD SIGNOS VITALES)
+
